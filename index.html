@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 2 - Albert Hong</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kreon:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="headline"> A Timeline of the Assassins from "Assassin's Creed" </div> 
+
+<p style="font-size: 20px; font-family: arial; margin-left: 110px"> <strong><em>By:</em> Albert Hong </strong> | Oct. 5, 2015</p>
+
+<div class="intro"> The "Assassin's Creed" series of video games had its start with the original back in 2007, placing you as Desmond Miles, a descendant of a long line of Assassins who seeked to ensure the survival of freedom. As Desmond, you relive the memories of your ancestors who were engaged in a war with the Templars, an organization that sought to control humans. With the next installment of the series, "Assassin's Creed Syndicate," set to release on Oct. 23, let's take a look back at the Assassins who you have played as throughout history. </div>
+
+<div class="container straighten">
+    <div id="popup">
+        <div class="marker" id="AC3"></div>
+        <div class="marker" id="ACR"></div>
+        <div class="marker" id="AC1"></div>
+        <div class="marker" id="AC2"></div>
+        <div class="marker" id="AC4"></div>
+        <div class="marker" id="ACS"></div>
+        <img src="http://cdn.twitrcovers.com/wp-content/uploads/2013/08/Assassins-Creed-l1.jpg" />
+    </div>
+    <p style="font-size: 15px; font-family: arial; text-align: right; margin-right: -100px; margin-top: -40px;"><em>techbeasts.com </em></p>
+</div>
+
+<div class="textbox">
+    <div class="popuptitle">The Assassins</div>
+    Each game in the series had you play as a different Assassin from a different point in history. <br /> <br />Click on a marker above each Assassin to learn their name, which games they starred in, and their backstories.
+</div>
+
+
+<style>
+.headline {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 45px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 110px;
+    margin-right: 520px;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+}
+
+.container{
+    width: 60%;
+    display: inline-block;
+    position: relative;
+}
+.straighten:after {
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#popup {
+    position: relative;
+}
+.hoverbox {
+    position: absolute;
+    padding: 0.5em;
+    background-color: #fff;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+    z-index: 300;
+    font-family: 'Kreon', serif;
+    line-height: 1.3em;
+    min-width: 100px;
+    max-width: 200px;
+}
+.textbox {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    font-family: 'Kreon', serif;
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-left: 100px;
+}
+.container img {    
+    width: 100%;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+.marker{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+.marker:hover {
+    background-color: yellow;
+}
+#AC3 {
+    top:6%;
+    left: 50%;
+}
+#AC1 {
+    top:14%;
+    left: 15%;
+}
+#ACR {
+    top: 11%;
+    right: -4%;
+}
+#AC2 {
+    top: 10%;
+    left: 30%;
+}
+#AC4 {
+    top: 3%;
+    left: 70%;
+}
+#ACS {
+    top: 7%;
+    left: 86%;
+}
+
+.popuptitle {
+    color: #003380;
+    font-family: 'Kreon', serif;
+    letter-spacing: 0.01em;
+    font-size:24px; 
+    font-weight:700;
+    clear:both;
+}
+@media screen and (max-width: 900px) {
+.container{
+    width: 90%
+}
+.textbox{
+    width: 90%
+}
+}
+</style>
+
+<script>
+$(document).ready(function() {
+
+var data = 
+[["ACR","Shay Cormac", "Shay Cormac (1731-????) was brougt into the Colonial Brotherhood of Assassins when he was a child but after learning about how the Assassins deceived him, he became a member of the Colonial Rite of the Templar Order during the 18th century. Having received Assassin training, he was a formidable opponent adept at rifles and sneakery."],
+["AC3","Ratonhnhake:ton", "Ratonhnhake:ton (1756-????), also known as Connor Kenway, was a Master Assassin of the Colonial Brotherhood of Assassins during the period of the American Revolutionary War. Born into the Kanien'kehá:ka tribe, his specialites included hunting, tree-traversal and mastery of a hatchet."],
+["AC1","Altair Ibn-La'Ahad", "Altair Ibn-La'Ahad (1165-1257) was a Syrian-born member of the Levantine Brotherhood of Assassins and served as their Mentor from 1191 until his death in 1257. During his tenure as Mentor, Altaïr made several discoveries and inventions that greatly helped the Order's progression. Becoming a Master Assassin at the age of 25, the youngest ever to obtain the rank, his leadership saw to the spread of the Assassins' influence in the Old World."],
+["AC2","Ezio Auditore da Firenze", "Ezio Auditore da Firenze (1459-1524) was a Florentine nobleman during the Renaissance, and, unbeknownst to most historians and philosophers, the Mentor of the Italian Brotherhood of Assassins, a title which he held from 1503 to 1513. He is also an ancestor to William and Desmond Miles, as well as Clay Kaczmarek."],
+["AC4","Edward Kenway", "Edward Kenway (1693-1735) was a Welsh-born British privateer-turned-pirate and a member of the Assassin Order.In his quest for riches as a pirate, he learned of the Assassins and devoted his life to their cause. As the captain of the Black Flag, he was skilled in seafaring adventures and handling swords and guns simultaneously."],
+["ACS","Aveline de Grandpre", "Aveline de Grandpre (1747-????) was an Assassin of French and African heritage, who lived in the area of New Orleans during the middle of the 18th century. She was the first playable female Assassin for the game series."]];
+
+
+$(".marker").click(function(){
+    $('.textbox').empty();
+    for (var i=0; i<data.length; i++) {
+    if (this.id == data[i][0]) {
+        $(".textbox").append('<div class="popuptitle">'+data[i][1]+'</div>' + data[i][2]);
+    } 
+    } 
+});
+
+var pos, they, thex;
+
+$('.marker').mouseover(function(e){
+    $('.hoverbox').remove();
+
+    pos = $('#popup').offset();
+    thex = event.pageX - pos.left + 10;
+    they = event.pageY - pos.top + 0;
+    if (thex > $('#popup').width() - 150) { thex = $('#popup').width() - 150};
+    if (they > $('#popup').height() -100) { they = $('#popup').height() -100};
+
+
+    for (var i=0; i<data.length; i++) {
+    if (this.id == data[i][0]) {
+        $("#popup").append('<div class="hoverbox" style="top:' + they + 'px; left:' + thex + 'px;"> <div class="popuptitle">'+data[i][1]+'</div></div>');
+    } 
+    }
+});//mouseover
+
+$('.marker').mouseout(function() {
+    $('.hoverbox').remove();
+});
+
+
+});//doc ready
+</script>
+
+</body>
+</html>
+
+
+
